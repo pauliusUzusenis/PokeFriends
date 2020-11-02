@@ -1,5 +1,5 @@
 List of pokemons with ability to search and view detailed info of your favorite pokemon!
-Stack: ReactJS, Redux, Hooks, fetchAPI
+Stack: ReactJS, Redux, Hooks, fetchAPI.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
