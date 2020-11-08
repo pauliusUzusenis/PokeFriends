@@ -4,7 +4,7 @@ Stack: ReactJS, Redux, Hooks, fetchAPI.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Live Demo:
+Live demo:
 https://pauliusuzusenis.github.io/pokefriends/
 
 ## Available Scripts
