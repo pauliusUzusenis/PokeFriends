@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "647f51b70ad862d7695d46dba513f310",
+    "revision": "5b7ba81f99b5336d90776b118a400869",
     "url": "/pokefriends/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pokefriends/static/css/2.038644eb.chunk.css"
   },
   {
-    "revision": "5e582ad4c856b2efd62e",
-    "url": "/pokefriends/static/css/main.ff673a96.chunk.css"
+    "revision": "82b0d11d0e6f235623dd",
+    "url": "/pokefriends/static/css/main.be97259c.chunk.css"
   },
   {
     "revision": "c9efd8f1de297e0a7d12",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pokefriends/static/js/2.469b6bb6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5e582ad4c856b2efd62e",
-    "url": "/pokefriends/static/js/main.f75d597a.chunk.js"
+    "revision": "82b0d11d0e6f235623dd",
+    "url": "/pokefriends/static/js/main.284c7625.chunk.js"
   },
   {
     "revision": "c666e9941f2bdccb7457",
