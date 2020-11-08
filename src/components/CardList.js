@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import Card from './Card';
 
-const CardList = ({ pokemons, showModal, toggleModal }) => {
+const CardList = ({ pokemons, toggleModal }) => {
 	return (
 		<Fragment>
 		{

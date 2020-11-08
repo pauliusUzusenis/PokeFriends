@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
@@ -26,72 +26,58 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-const initialState = {
-	showModal: false,
-	selectedPokemonId: null,
-	selectedPokemonInfo: null
-}
+function App(props) {
+	useEffect(() => {
+		props.onRequestPokemons();
+	}, [])
+	
+	const [ showModal, setShowModal ] = useState(false);
+	const [ selectedPokemonId, setSelectedPokemonId ] = useState(null);
+	const [ selectedPokemonInfo, setSelectedPokemonInfo ] = useState(null);
 
-class App extends Component {
-	constructor() {
-		super();
-		this.state = initialState;
+	const toggleModalOn = (pokemonId) => {
+		fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
+		.then(response => response.json())
+		.then(({name, stats, abilities }) => ({name, stats, abilities }))
+		.then(data => {
+			setSelectedPokemonId(pokemonId);
+			setSelectedPokemonInfo(data);
+			setShowModal(true);
+		})
 	}
-
-	componentDidMount() {
-		this.props.onRequestPokemons();
-	}
-
-	toggleModal = (selectedPokemonId) => {
-		if (selectedPokemonId) {
-			fetch(`https://pokeapi.co/api/v2/pokemon/${selectedPokemonId}`)
-			.then(response => response.json())
-			.then(({name, stats, abilities }) => ({name, stats, abilities }))
-			.then(data => {
-				this.setState({
-					showModal: !this.state.showModal,
-					selectedPokemonId: selectedPokemonId,
-					selectedPokemonInfo: data
-				})
-			})
-		}
-		else {
-			this.setState({ 
-				showModal: !this.state.showModal,
-				selectedPokemonId: null,
-				selectedPokemonInfo: null
-			})
-		}
+	
+	const toggleModalOff = () => {
+		setShowModal(false);
+		setSelectedPokemonId(null);
+		setSelectedPokemonInfo(null);
 	};
 	
-	render() {
-		const { searchField, onSearchChange, pokemons, isPending } = this.props;
-		const filteredPokemons = pokemons.filter(pokemon => {
-			return pokemon.name.toLowerCase().includes(searchField.toLowerCase()); 
-		})
-		return isPending ?
-		<h1 className='tc f1'>Loading</h1> :
-		(
-			<div className='tc'>
-				<h1 className='f1'>Find Your PoKéFriend</h1>
-				<SearchBox searchChange={onSearchChange} />
-				<ErrorBoundry>
-					<Scroll>
-						<CardList
+	const { searchField, onSearchChange, pokemons, isPending } = props;
+	const filteredPokemons = pokemons.filter(pokemon => {
+		return pokemon.name.toLowerCase().includes(searchField.toLowerCase()); 
+	})
+	return isPending ?
+	<h1 className='tc f1'>Loading</h1> :
+	(
+		<div className='tc'>
+			<h1 className='f1'>Find Your PoKéFriend</h1>
+			<SearchBox searchChange={onSearchChange} />
+			<ErrorBoundry>
+				<Scroll>
+					<CardList
 						pokemons={filteredPokemons} 
-						toggleModal={this.toggleModal}
-						showModal={this.state.showModal}
-						selectPokemon={this.selectPokemon} />
-					</Scroll>
-					{this.state.showModal &&
-						<Modal toggleModal={this.toggleModal}>
-							<DescriptionCard id={this.state.selectedPokemonId} data={this.state.selectedPokemonInfo}></DescriptionCard>
-						</Modal>
-					}
-				</ErrorBoundry>
-			</div>
-		) 
-	}
+						toggleModal={toggleModalOn} />
+				</Scroll>
+				{showModal &&
+					<Modal toggleModal={toggleModalOff}>
+						<DescriptionCard 
+							id={selectedPokemonId} 
+							data={selectedPokemonInfo} />
+					</Modal>
+				}
+			</ErrorBoundry>
+		</div>
+	) 
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
