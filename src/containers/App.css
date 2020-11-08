@@ -86,9 +86,6 @@ h1 {
 	.card {
 		width: 16rem;
 	}
-	.smallCard img {
-		display: none;
-	}
 	.descriptionCard {
 		height: 100%;
 	}
@@ -97,5 +94,8 @@ h1 {
 @media only screen and (max-width: 300px) {
 	.card {
 		width: 12rem;
+	}
+	.smallCard img {
+		display: none;
 	}
 }
