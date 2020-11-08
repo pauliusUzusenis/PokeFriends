@@ -1,10 +1,10 @@
+Displays a list of pokemons with ability to search and view detailed info of your favorite pokemon. Enjoy!
+
+Stack: ReactJS, Redux, Hooks, fetchAPI.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 Live Demo:
 https://pauliusuzusenis.github.io/pokefriends/
-
-List of pokemons with ability to search and view detailed info of your favorite pokemon. Enjoy!
-Stack: ReactJS, Redux, Hooks, fetchAPI.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
