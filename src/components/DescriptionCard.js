@@ -5,9 +5,7 @@ const DescriptionCard = ({ id, data }) => {
 		<div className='tc descriptionCard dib br3 pa3 ma3 shadow-4'>
 			<div className='smallCard center'>
 				<img alt='admin' src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`}/>
-				<div>
-					<h2 className='ttu mt2 mb0'>{data.name}</h2>
-				</div>
+				<h2 className='tc ttu mb0'>{data.name}</h2>
 			</div>
 			<div>
 				<h3 className='tc ttu'>Stats</h3>

@@ -16,75 +16,6 @@ h1 {
 		4px 4px 0 rgb(61, 95, 159);	  
 }
 
-.card {
-	background-color: rgba(255, 230, 121, 1);
-	width: 24rem;
-	color: rgba(81,7,131,1);
-	font-family: Tahoma, Arial, Helvetica, sans-serif;
-}
-
-.smallCard {
-	width: 14rem;
-	color: rgba(81,7,131,1);
-	font-family: Tahoma, Arial, Helvetica, sans-serif;
-}
-
-@media only screen and (max-height: 780px) {
-	.descriptionCard {
-		background-color: rgba(255, 255, 255, 0.85);
-		width: 65vw;
-		height: 75vh;
-		color: rgba(81,7,131,1);
-		font-family: Tahoma, Arial, Helvetica, sans-serif;
-		font-size: 0.8rem;
-	}
-
-	.smallCard {
-		width: 10rem;
-		color: rgba(81,7,131,1);
-		font-family: Tahoma, Arial, Helvetica, sans-serif;
-	}
-
-	.descriptionCardTable tr {
-		border-bottom: 1px grey;
-		color: purple;
-		height: 1.1rem;
-	}
-}
-
-@media only screen and (min-height: 780px) {
-	.descriptionCard {
-		background-color: rgba(255, 255, 255, 0.85);
-		width: 65vw;
-		height: 75vh;
-		color: rgba(81,7,131,1);
-		font-family: Tahoma, Arial, Helvetica, sans-serif;
-		font-size: 1rem;
-	}
-
-	.smallCard {
-		width: 14rem;
-		color: rgba(81,7,131,1);
-		font-family: Tahoma, Arial, Helvetica, sans-serif;
-		padding: .5rem;
-	}
-	
-	.descriptionCardTable tr {
-		border-bottom: 1px grey;
-		color: purple;
-		height: 1.6rem;
-	}
-}
-
-@media only screen and (max-height: 600px) {
-	.smallCard img {
-		display: none;
-	}
-	.descriptionCard {
-		height: 100%;
-	}
-}
-
 .descriptionCardTable {
 	width: 44vw;
 	margin-left: auto;
@@ -99,4 +30,72 @@ h1 {
 
 .searchBox::placeholder {
 	color: rgba(81,7,131,1);
+}
+
+.card {
+	background-color: rgba(255, 230, 121, 1);
+	width: 24rem;
+	color: rgba(81,7,131,1);
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.descriptionCard {
+	background-color: rgba(255, 255, 255, 0.85);
+	width: 65vw;
+	height: 75vh;
+	color: rgba(81,7,131,1);
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+}
+
+.smallCard {
+	max-width: 14rem;
+	color: rgba(81,7,131,1);
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	padding: .5rem;
+}
+
+.descriptionCardTable tr {
+	border-bottom: 1px grey;
+	color: purple;
+	height: 1.6rem;
+}
+
+@media only screen and (max-height: 780px) {
+	.descriptionCard {
+		font-size: 0.8rem;
+	}
+	.smallCard {
+		max-width: 10rem;
+	}
+	.descriptionCardTable tr {
+		height: 1.1rem;
+	}
+}
+
+@media only screen and (max-height: 600px) {
+	.smallCard img {
+		display: none;
+	}
+	.descriptionCard {
+		height: 100%;
+	}
+}
+
+@media only screen and (max-width: 410px) {
+	.card {
+		width: 16rem;
+	}
+	.smallCard img {
+		display: none;
+	}
+	.descriptionCard {
+		height: 100%;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	.card {
+		width: 12rem;
+	}
 }
