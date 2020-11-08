@@ -1,4 +1,7 @@
-List of pokemons with ability to search and view detailed info of your favorite pokemon!
+Live Demo:
+https://pauliusuzusenis.github.io/pokefriends/
+
+List of pokemons with ability to search and view detailed info of your favorite pokemon. Enjoy!
 Stack: ReactJS, Redux, Hooks, fetchAPI.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -14,11 +17,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
@@ -26,6 +24,19 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
+
+### `npm run predeploy`
+
+Runs automatically before deploy is run.
+
+### `npm run predeploy`
+
+Deploys to GitHub Pages (url is set in homepage property in package.json).
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run eject`
 
