@@ -30,7 +30,7 @@ Your app is ready to be deployed!
 
 Runs automatically before deploy is run.
 
-### `npm run predeploy`
+### `npm run deploy`
 
 Deploys to GitHub Pages (url is set in homepage property in package.json).
 
