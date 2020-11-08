@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pokefriends/precache-manifest.26e9392edbc671a4a4b1505514ecd821.js"
+  "/pokefriends/precache-manifest.b6612453adcbc0e2aeaade358ec63d84.js"
 );
 
 self.addEventListener('message', (event) => {
