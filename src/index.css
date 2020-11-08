@@ -8,6 +8,10 @@ body {
   background: linear-gradient(to left, rgba(146,80,191, 1) 0%, rgba(81,7,131,1) 100%);
 }
 
+body.modal-open {
+	overflow: hidden;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

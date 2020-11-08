@@ -40,6 +40,7 @@ function App(props) {
 		.then(response => response.json())
 		.then(({name, stats, abilities }) => ({name, stats, abilities }))
 		.then(data => {
+			document.body.classList.add('modal-open');
 			setSelectedPokemonId(pokemonId);
 			setSelectedPokemonInfo(data);
 			setShowModal(true);
@@ -47,6 +48,7 @@ function App(props) {
 	}
 	
 	const toggleModalOff = () => {
+		document.body.classList.remove('modal-open');
 		setShowModal(false);
 		setSelectedPokemonId(null);
 		setSelectedPokemonInfo(null);
